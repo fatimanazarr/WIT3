@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/signUpStyle.css">
+    <link rel="stylesheet" href="./style/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Sign Up</title>
+    <style>
+        .input-container {
+            position: relative;
+        }
+        
+        .show-hide-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+            <ul class="nav-links" >
+                <li><a href="#" class="translate-text" data-en="Home" data-ar="الصفحة الرئيسية">Home</a></li>
+                <li><a href="about.html" class="translate-text" data-en="About" data-ar="عن الشركة">About</a></li>
+                <li><a href="#" class="translate-text" data-en="Programs" data-ar="البرامج">Programs</a></li>
+                <li><a href="En.html" class="translate-text" data-en="Login / Register" data-ar="تسجيل الدخول / التسجيل">Login / Register</a></li>
+            </ul>
+            <div class="icons">
+                <a href="#" class="icon search-icon"><i class="fas fa-search"></i></a> 
+                <a href="#" class="icon translate-icon" id="translate-icon"><i class="fas fa-globe"></i></a>
+                <a href="profile.html" class="icon profile-icon"><i class="fas fa-user"></i></a> 
+                <a href="#" class="icon dark-mode-icon" id="dark-mode-toggle"><i class="fas fa-moon"></i>
+                </a> 
+            <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button> 
+        </div>
+    </nav>
+
+    <section class="signUp">
+        <div class="signUpCard">
+            <div class="cardContent">
+                <h3>Sign Up</h3>
+                <form action="#">
+                <input type="text" id="name" name="name" placeholder="name"><br><br>
+                <input type="email" id="email" name="email" placeholder="email"><br><br>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" placeholder="password">
+                    <i class="fas fa-eye show-hide-password" id="password-eye"></i>
+                </div><br><br>
+                <div class="input-container">
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="confirm password">
+                    <i class="fas fa-eye show-hide-password" id="confirm-password-eye"></i>
+                </div><br><br>
+                <input type="submit" value="Sign Up" id="SignUpBtn">
+                </form>
+            </div>
+        </div>
+    </section>
+
+<footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./img/logo.png" alt="Logo" class="footer-logo-image">
+            </div>
+            <div class="footer-description">
+                <p>Contact us</p>
+                <p>Address: Iraq, Baghdad, Al Jadriya</p>
+                <p>Email: support@moon.iq</p>
+                <p>Copyright © 2024 moon | Women in Tech | G-2</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<script>
+        let passwordEye = document.getElementById('password-eye');
+        let confirmPasswordEye = document.getElementById('confirm-password-eye');
+        let passwordInput = document.getElementById('password');
+        let confirmPasswordInput = document.getElementById('confirm-password');
+
+        passwordEye.addEventListener('click', () => {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        });
+
+        confirmPasswordEye.addEventListener('click', () => {
+            if (confirmPasswordInput.type === 'password') {
+                confirmPasswordInput.type = 'text';
+            } else {
+                confirmPasswordInput.type = 'password';
+            }
+        });
+    </script>
+    <script src="./scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+</body>
+</html>
