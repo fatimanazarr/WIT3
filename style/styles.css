@@ -146,7 +146,7 @@
     background-size: 200% 100%; /* تحجيم الخلفية لتمكين الحركة */
     padding: 50px;
     position: relative;
-    min-height: 90vh;
+    height: 80vh;
     padding-right: 20px;
     overflow: hidden;
     cursor: pointer;
@@ -175,7 +175,7 @@
 }
 
 .image-container img {
-    width: 480px;
+    width: 510px;
     height: auto;
     margin-right: 65px;
     margin-top: -200px;
