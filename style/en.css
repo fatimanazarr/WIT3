@@ -1,17 +1,10 @@
-
-/*
-  background-color: #b43dc1; button
-    background-color: #b958c4; hover
-#000000 h1
-*/
-
 body {
     font-family: exo;
-     margin: 0;
-     padding: 0;
-     background-color: #f9f9f9;
-     transition: background-color 0.3s, color 0.3s;
- }
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, color 0.3s;
+}
 
 
 .navbar {
@@ -130,7 +123,7 @@ body {
 }
 
 .dark-mode .navbar {
-    background: url('dark-background-image.jpg') no-repeat center center; /* background for dark mode */
+    background: url('dark-background-image.jpg') no-repeat center center; /*background for dark mode */
     background-size: cover;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -177,11 +170,15 @@ body {
         z-index: 1000;
     }
 }
-/*2 nav*/
+
 .dark-mode .nav-links {
     background: #333;
 }
 
+
+
+
+/*2 nav*/
 
 
 .footer {
@@ -449,313 +446,116 @@ body.dark-mode .footer-social a:hover {
         margin: 5px 0;
     }
 }
-.header-section {
-    width: 100%;
-    overflow: hidden;
-}
 
-.header {
-    position: relative;
-    width: 100%;
-    height: 500px;
-}
 
-.header-image {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.header-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: opacity 1s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#header-img2 {
-    opacity: 0;
-}
-
-@media (max-width: 768px) {
-    .header {
-        height: 300px;
+    .enroll-section {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        position: relative;
     }
-}
-
-@media (max-width: 480px) {
-    .header {
-        height: 200px;
+    .form-container {
+        background-color: #f9f9f9;
+        padding: 30px;
+        border-radius: 10px;
+        width: 70%;
+      
+        position: relative;
+        z-index: 1;
     }
-}
-
-/*الى هنا نهاية النسح*/
-.who-we-are {
-    padding: 40px;
-justify-content: center;
-    background-color: #f9f9f9;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.who-we-are.section-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.text {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.text h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.text p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.read-more {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 1.1em;
-    color: #fff;
-    background-color: #9B86BD;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.read-more:hover {
-    background-color: rgb(137, 65, 145);
-    transform: translateY(-2px);
-}
-
-.read-more:active {
-    background-color: rgb(137, 65, 145);
-    transform: translateY(1px);
-}
-
-.image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.image img {
-    max-width: 60%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.image img:hover {
-    transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-    .text h2 {
-        font-size: 1.5em;
+    h1 {
+        text-align: center;
+        color: #333;
+        font-size: 2rem;
     }
 
-    .text p {
-        font-size: 1em;
+    body.dark-mode .form-container {
+        background-color: #333;
+    }
+    body.dark-mode h1 {
+        color: #e0e0e0;
+    }
+    body.dark-mode label {
+        color: #b3b3b3;
+    }
+    body.dark-mode input, body.dark-mode button {
+        background-color: #1f1f1f;
+        color: #f1f1f1;
+        border: 1px solid #2b2b2b;
     }
 
-    .read-more {
+    body.dark-mode input[type="file"] {
+        background-color: transparent;
+        color: #f1f1f1;
+    }
+    body.dark-mode .boo button {
+        background-color: #b43dc1;
+        color: #fff;
+        border: none;
+    }
+
+    .form-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+    }
+    .left-column, .right-column {
+        width: 48%;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+    input[type="text"], input[type="email"], input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+.full-width  input[type="text"]{
+width: 60%;
+}
+
+    .boo button {
+        display: block;
+        margin: 20px auto;
         padding: 10px 20px;
-        font-size: 1em;
+        background-color: #9B86BD;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
     }
 
-    .image img {
-        max-width: 80%;
-    }
-}
-
-@media (max-width: 480px) {
-    .text h2 {
-        font-size: 1.2em;
+    .full-width {
+        width: 100%;
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
     }
 
-    .text p {
-        font-size: 0.6em;
+    
+
+    @media (max-width: 768px) {
+        .form-content {
+            flex-direction: column;
+        }
+        .left-column, .right-column {
+            width: 100%;
+        }
+        .image-outside img {
+            max-width: 100px;
+        }
+        
+.full-width  input[type="text"]{
+    width: 100%;
     }
-
-    .read-more {
-        padding: 8px 16px;
-        font-size: 0.6em;
     }
-
-    .image img {
-        max-width: 90%;
-    }
-}
-
-body.dark-mode .who-we-are {
-    background-color: #333;
-}
-
-body.dark-mode .text h2,
-body.dark-mode .text p {
-    color: #f9f9f9;
-}
-
-body.dark-mode .read-more {
-    background-color: #b43dc1; 
-}
-
-body.dark-mode .read-more:hover {
-    background-color: #b958c4; 
-}
-
-.women-in-tech {
-    padding: 40px;
-    background-color: #f9f9f9;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.women-in-tech.section-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.women-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.women-text {
-    flex: 1;
-    padding-left: 20px;
-    text-align: right;
-}
-
-.women-text h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.women-text p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.women-read-more {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 1.1em;
-    color: #fff;
-    background-color: #9B86BD; 
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.women-read-more:hover {
-    background-color: rgb(137, 65, 145);
-    transform: translateY(-2px);
-}
-
-.women-read-more:active {
-    background-color: rgb(137, 65, 145);
-    transform: translateY(1px);
-}
-
-.women-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.women-image img {
-    max-width: 60%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.women-image img:hover {
-    transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-    .women-text h2 {
-        font-size: 1.5em;
-    }
-
-    .women-text p {
-        font-size: 1em;
-    }
-
-    .women-read-more {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-
-    .women-image img {
-        max-width: 80%;
-    }
-}
-
-@media (max-width: 480px) {
-    .women-text h2 {
-        font-size: 1.2em;
-    }
-
-    .women-text p {
-        font-size: 0.6em;
-    }
-
-    .women-read-more {
-        padding: 8px 16px;
-        font-size: 0.6em;
-    }
-
-    .women-image img {
-        max-width: 90%;
-    }
-}
-
-body.dark-mode .women-in-tech {
-    background-color: #333;
-}
-
-body.dark-mode .women-text h2,
-body.dark-mode .women-text p {
-    color: #f9f9f9;
-}
-
-body.dark-mode .women-read-more {
-    background-color: #b43dc1; 
-}
-
-body.dark-mode .women-read-more:hover {
-    background-color: #b958c4; 
-}
 
