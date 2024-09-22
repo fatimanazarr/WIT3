@@ -51,6 +51,23 @@
     transition: background-color 0.3s;
     margin-top: 7px;
 }
+.already-have-account {
+    margin-left: 220px;
+    margin-top: 30px;
+}
+
+.already-have-account h4 {
+    color: gray;
+    font-weight: 400;
+}
+.already-have-account a{
+    text-decoration: none;
+    color: #9B86BD;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 20px;
+
+}
 .remember-me {
     margin-left: 0px;
     margin-top: 15px;
@@ -63,4 +80,22 @@
 .remember-me label {
     font-size: 16px;
     color: #555555;
+}
+
+.dont-have-account {
+    margin-left: 220px;
+    margin-top: 30px;
+}
+
+.dont-have-account h4 {
+    color: gray;
+    font-weight: 400;
+}
+.dont-have-account a{
+    text-decoration: none;
+    color: #9B86BD;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 20px;
+
 }
