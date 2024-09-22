@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Overview</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .progress-overview {
+      display: flex;
+      align-items: center;
+    }
+
+    .circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: lightgray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      font-size: 24px;
+      color: white;
+    }
+
+    .line {
+      width: 90px;
+      height: 5px;
+      background-color: gray;
+    }
+
+    .circle.completed {
+      background-color: #9B86BD;
+    }
+
+    .circle span {
+      position: absolute;
+      top: 60px; 
+      font-size: 14px;
+      color: black;
+    }
+
+    .checkmark {
+      display: none;
+      font-size: 20px; 
+      color: white;
+    }
+
+    .circle.completed .checkmark {
+      display: block;
+    }
+
+
+    @media (max-width: 600px) {
+      .circle {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
+
+      .line {
+        width: 60px;
+      }
+
+      .circle span {
+        font-size: 12px;
+        top: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HTML -->
+  <div class="progress-overview">
+    <div class="circle" id="circle1">
+      <i class="fas fa-check checkmark"></i> 
+      <span>Task 1</span> 
+    </div>
+    <div class="line"></div>
+    <div class="circle" id="circle2">
+      <i class="fas fa-check checkmark"></i> 
+      <span>Task 2</span>
+    </div>
+    <div class="line"></div>
+    <div class="circle" id="circle3">
+      <i class="fas fa-check checkmark"></i> 
+      <span>Task 3</span>
+    </div>
+    <div class="line"></div>
+    <div class="circle" id="circle4">
+      <i class="fas fa-check checkmark"></i> 
+      <span>Task 4</span>
+    </div>
+    <div class="line"></div>
+    <div class="circle" id="circle5">
+      <i class="fas fa-check checkmark"></i> 
+      <span>Task 5</span>
+    </div>
+    <div class="line"></div>
+    <div class="circle" id="circle6">
+      <i class="fas fa-check checkmark"></i> 
+      <span>Task 6</span>
+    </div>
+    <div class="line"></div>
+    <div class="circle" id="circle7">
+      <i class="fas fa-check checkmark"></i> 
+      <span>Task 7</span>
+    </div>
+    <div class="line"></div>
+    <div class="circle" id="circle8">
+      <i class="fas fa-check checkmark"></i> 
+      <span>Task 8</span>
+    </div>
+    <div class="line"></div>
+    <div class="circle" id="circle9">
+      <i class="fas fa-check checkmark"></i> 
+      <span>Task 9</span>
+    </div>
+  </div>
+
+  <script>
+    function completeTask(index) {
+      const circle = document.getElementById(`circle${index}`);
+      if (circle) {
+        circle.classList.add('completed');
+      }
+    }
+
+    function autoCompleteTasks() {
+      let currentTask = 1;
+      const totalTasks = 3; // نكمل فقط أول 3 دوائر
+      const interval = 3000; // 3000ms = 3 لكل دائرة سرعة
+
+      const taskInterval = setInterval(() => {
+        completeTask(currentTask);
+        currentTask++;
+        if (currentTask > totalTasks) {
+          clearInterval(taskInterval); 
+        }
+      }, interval);
+    }
+
+    window.onload = autoCompleteTasks;
+  </script>
+
+</body>
+</html>
