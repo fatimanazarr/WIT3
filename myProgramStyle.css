@@ -202,10 +202,10 @@ body {
 /* Sidebar */
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 45.5px;
     left: 0;
     width: 85px;
-    height: 100%;
+    height: calc(100vh - 45.5px);
     background: #ffffff;
     padding: 25px 18px;
     transition: all 0.4s ease;
@@ -223,7 +223,7 @@ body {
 .sidebar-header {
     display: flex;
     align-items: center;
-    padding: 20px 10px;
+    padding: 0px 10px;
 }
 
 .sidebar-header img {
