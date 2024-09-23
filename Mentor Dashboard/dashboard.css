@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: Inter;
 }
+button {
+    cursor: pointer;
+}
 .container {
     max-width: 1220px; /* adjust the max-width as needed */
     margin: 0 auto; /* center the container */
@@ -377,7 +380,21 @@ hr {
     font-size: 12px;
     letter-spacing: -0.01em;
 }
-
+.notifications .editProfileBtn {
+    margin-top: 30px;
+    transform: translateX(50px);
+    width: 65%;
+    border-radius: 29.04px;
+    border: none;
+    background-color: #9b86bd;
+    height: 46.1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9.7px 23.2px;
+    font-size: 17.42px;
+    color: #fff;
+}
 .myCourses {
     display: flex;
     width: 69%;
