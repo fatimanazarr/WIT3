@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Menu</title>
+    <link rel="stylesheet" href="myCoursse.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- nav bar html -->
+   
+    <nav class="navbar">
+      <div class="container">
+          <a href="#" class="logo">
+              <img src="img/logo.png" alt="Logo">
+          </a>
+          <ul class="nav-links" >
+            <li><a href="index.html" class="translate-text" data-en="Home" data-ar="الصفحة الرئيسية">Home</a></li>
+            <li><a href="about.html" class="translate-text" data-en="About" data-ar="عن الشركة">About</a></li>
+            <li><a href="program.html" class="translate-text" data-en="Programs" data-ar="البرامج">Programs</a></li>
+            <li><a href="myProgram.html" class="translate-text" data-en="Programs" data-ar="البرامج">My Program</a></li>
+            <li><a href="En.html" class="translate-text" data-en="Enroll" data-ar="التسجيل">Enroll</a></li>
+        </ul>
+          <div class="icons">
+              <a href="#" class="icon search-icon"><i class="fas fa-search"></i></a> 
+              <a href="#" class="icon translate-icon" id="translate-icon"><i class="fas fa-globe"></i></a>
+              <a href="profile.html" class="icon profile-icon"><i class="fas fa-user"></i></a> 
+              <a href="#" class="icon dark-mode-icon" id="dark-mode-toggle"><i class="fas fa-moon"></i>
+              </a> 
+          <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button> 
+      </div>
+  </nav>
+
+<!-- end nav bar  -->
+    <!-- end nav bar  -->
+
+    <!-- start sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="img/menu-icon.png" alt="logo">
+            <h3>Menu</h3>
+        </div>
+        <ul class="sidebar-link">
+            <li><a href="myProgram.html"><img src="img/courseIcon.png" alt="Icon 1"><span>Course</span></a></li>
+            <li><a href="myProgram.html"><img src="img/prograssIcon.png" alt="Icon 2"><span>Progress</span></a></li>
+            <li><a href="myProgram.htmlk"><img src="img/quickLinkIcon.png" alt="Icon 3"><span>Quick Link</span></a></li>
+            <li><a href="myProgram.html"><img src="img/mentorIcon.png" alt="Icon 4"><span>Mentor</span></a></li>
+        </ul>
+    </aside>
+    <!-- end sidebar -->
+
+    <!-- start main content -->
+    <main class="main-content">
+        <div class="mytabs">
+            <!-- Tab 1 -->
+            <input type="radio" id="tabfree" name="mytabs" checked="checked">
+            <label for="tabfree">Free</label>
+            <div class="tab">
+                <video class="ved-course" controls>
+                    <source src="ved/ved1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h2>Free</h2>
+                <h4>Title for Free Plan</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <!-- Tab 2 -->
+            <input type="radio" id="tabsilver" name="mytabs">
+            <label for="tabsilver">Silver</label>
+            <div class="tab">
+                <video class="ved-course" controls>
+                    <source src="ved/ved2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h2>Silver</h2>
+                <h4>Title for Silver Plan</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <!-- Tab 3 -->
+            <input type="radio" id="tabgold" name="mytabs">
+            <label for="tabgold">Gold</label>
+            <div class="tab">
+                <video class="ved-course" controls>
+                    <source src="ved/ved3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h2>Gold</h2>
+                <h4>Title for Gold Plan</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
